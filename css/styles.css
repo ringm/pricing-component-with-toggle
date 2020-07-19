@@ -232,8 +232,9 @@ h2 {
 /*ATTRIBUTION
 -------------------------------------------*/
 .attribution {
-  font-size: 11px;
+  font-size: 1.1rem;
   text-align: center;
+  color: #494c5f;
 }
 
 .attribution a {
