@@ -1,0 +1,130 @@
+/*HEADER
+-------------------------------------------*/
+
+.header {
+  margin-bottom: 6rem;
+
+  &__title {
+    color: $grayish-blue;
+    margin-bottom: 3rem;
+  }
+}
+
+/*TOGGLE
+-------------------------------------------*/
+
+.toggle {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: 'Annualy';
+    display: inline-block;
+    color: $light-grayish-blue;
+  }
+
+  &::after {
+    content: 'Monthly';
+    display: block;
+    color: $light-grayish-blue;
+  }
+
+  input {}
+
+  &__slider {
+    background: linear-gradient(90deg, rgba(163, 168, 240, 1) 0%, rgba(105, 111, 221, 1) 100%);
+    width: 10rem;
+    height: 5rem;
+    border-radius: 20rem;
+    cursor: pointer;
+  }
+}
+
+
+
+/*CARD
+-------------------------------------------*/
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 1rem;
+  width: min(100%, 340px);
+
+  box-shadow: -1px 7px 44px -19px rgba(163, 168, 240, .8);
+
+  &>*:not(:last-child) {
+    margin-bottom: 2.4rem;
+  }
+
+  &__title {
+    color: $grayish-blue;
+  }
+
+  &__price {
+    font-size: 6rem;
+    color: $dark-grayish-blue;
+  }
+
+  &__list {
+    width: 100%;
+    color: $grayish-blue;
+  }
+
+  &__list-item {
+    text-align: center;
+    color: inherit;
+    width: 100%;
+    border-bottom: 1px solid $light-grayish-blue;
+    padding: 1.5rem 0;
+
+    &:first-of-type {
+      border-top: 1px solid $light-grayish-blue;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    background: linear-gradient(90deg, rgba(163, 168, 240, 1) 0%, rgba(105, 111, 221, 1) 100%);
+    padding: 1.6rem 0;
+    border-radius: .4rem;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
+
+.card.highlight {
+  background: linear-gradient(180deg, rgba(163, 168, 240, 1) 0%, rgba(105, 111, 221, 1) 100%);
+  padding: 6rem 3rem;
+  color: $very-light-grayish-blue;
+
+  &>* {
+    color: inherit;
+  }
+}
+
+.card.highlight .card__btn {
+  background: $very-light-grayish-blue;
+  color: rgba(105, 111, 221, 1);
+}
+
+
+
+/*ATTRIBUTION
+-------------------------------------------*/
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
