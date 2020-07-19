@@ -135,6 +135,13 @@
     letter-spacing: .15rem;
     font-size: 1.2rem;
     font-weight: 600;
+    border: 1px solid transparent;
+
+    &:active {
+      background: transparent;
+      border: 1px solid rgba(105, 111, 221, 1);
+      color: rgba(105, 111, 221, 1);
+    }
   }
 }
 
@@ -151,6 +158,12 @@
 .card.highlight .card__btn {
   background: $very-light-grayish-blue;
   color: rgba(105, 111, 221, 1);
+
+  &:active {
+    background: transparent;
+    border: 1px solid $very-light-grayish-blue;
+    color: $very-light-grayish-blue;
+  }
 }
 
 

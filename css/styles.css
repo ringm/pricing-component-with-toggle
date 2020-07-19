@@ -202,6 +202,12 @@ h2 {
   letter-spacing: 0.15rem;
   font-size: 1.2rem;
   font-weight: 600;
+  border: 1px solid transparent;
+}
+.card__btn:active {
+  background: transparent;
+  border: 1px solid #696fdd;
+  color: #696fdd;
 }
 
 .card.highlight {
@@ -216,6 +222,11 @@ h2 {
 .card.highlight .card__btn {
   background: #f6f6fe;
   color: #696fdd;
+}
+.card.highlight .card__btn:active {
+  background: transparent;
+  border: 1px solid #f6f6fe;
+  color: #f6f6fe;
 }
 
 /*ATTRIBUTION
