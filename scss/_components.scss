@@ -6,7 +6,12 @@
 
   &__title {
     color: $grayish-blue;
+    margin-top: 6rem;
     margin-bottom: 3rem;
+
+    @media (min-width: 850px) {
+      margin-top: 0;
+    }
   }
 }
 
@@ -17,19 +22,29 @@
   display: flex;
   align-items: center;
 
-  &::before {
-    content: 'Annualy';
+  &::before,
+  &::after {
     display: inline-block;
     color: $light-grayish-blue;
   }
 
-  &::after {
-    content: 'Monthly';
-    display: block;
-    color: $light-grayish-blue;
+  &::before {
+    content: 'Annualy';
   }
 
-  input {}
+  &::after {
+    content: 'Monthly';
+  }
+
+  input {
+    display: none;
+  }
+
+  input:checked~.toggle__slider {
+    &::after {
+      transform: translateX(4.8rem);
+    }
+  }
 
   &__slider {
     background: linear-gradient(90deg, rgba(163, 168, 240, 1) 0%, rgba(105, 111, 221, 1) 100%);
@@ -37,6 +52,20 @@
     height: 5rem;
     border-radius: 20rem;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 0 2rem;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      background-color: $very-light-grayish-blue;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 20rem;
+      margin: 0 .6rem;
+      transition: transform .5s;
+    }
   }
 }
 
@@ -53,8 +82,17 @@
   padding: 3rem;
   border-radius: 1rem;
   width: min(100%, 340px);
-
   box-shadow: -1px 7px 44px -19px rgba(163, 168, 240, .8);
+
+  &+& {
+    margin-top: 3rem;
+  }
+
+  @media (min-width: 850px) {
+    &+& {
+      margin-top: 0;
+    }
+  }
 
   &>*:not(:last-child) {
     margin-bottom: 2.4rem;

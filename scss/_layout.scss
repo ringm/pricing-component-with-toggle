@@ -1,7 +1,7 @@
 .bg {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-color: $very-light-grayish-blue;
   background-image: url(../images/bg-bottom.svg), url(../images/bg-top.svg);
   background-repeat: no-repeat;
@@ -11,6 +11,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 100vh;
   }
 }
 
@@ -34,4 +35,9 @@
     flex-direction: row;
     justify-content: center;
   }
+}
+
+.attribution {
+  margin-top: 6rem;
+  margin-bottom: 2rem;
 }
